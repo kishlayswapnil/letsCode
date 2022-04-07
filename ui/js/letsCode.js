@@ -3,15 +3,14 @@ let editor;
 window.onload = function() {
     editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/java");
+    editor.session.setMode("ace/mode/python");
 }
 
 function changeLanguage() {
 
     let language = $("#languages").val();
-
-    if(language == 'java')editor.session.setMode("ace/mode/java");
-    else if(language == 'python')editor.session.setMode("ace/mode/python");
+    if(language == 'python')editor.session.setMode("ace/mode/python");
+    else if(language == 'java')editor.session.setMode("ace/mode/java");
 }
 
 function executeCode() {
